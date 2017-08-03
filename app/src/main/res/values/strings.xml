@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">sptask</string>
+    <string name="error_could_not_determine_address">Cannot determine address</string>
+</resources>
