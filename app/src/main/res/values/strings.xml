@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">sptask</string>
     <string name="error_could_not_determine_address">Cannot determine address</string>
+    <string name="psi_value">PSI Value</string>
+    <string name="air_quality_descriptor">Air Quality Descriptor</string>
+    <string name="good">Good</string>
+    <string name="moderate">Moderate</string>
+    <string name="unhealthy">Unhealthy</string>
+    <string name="very_unhealthy">Very unhealthy</string>
+    <string name="hazardous">Hazardous</string>
 </resources>
