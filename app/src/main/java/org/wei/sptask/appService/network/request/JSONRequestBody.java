@@ -21,7 +21,7 @@ public class JSONRequestBody extends LinkedHashMap<String, Object> {
 
     public JSONRequestBody() {
         mGsonBuilder = new GsonBuilder().serializeNulls();
-        mConfigBasePath = "https://api.data.gov.sg/v1/environment/psi";
+        mConfigBasePath = "https://api.data.gov.sg/v1";
         putDefaults();
     }
 

@@ -12,22 +12,26 @@ public class JSONRequestHeader  extends LinkedHashMap<String, String> {
     private final String mConfigBasePath;
 
 
+    public String getConfigBasePath(){
+        return mConfigBasePath;
+    }
+
     public JSONRequestHeader() {
-        mConfigBasePath = "https://api.data.gov.sg/v1/environment/psi";
+        mConfigBasePath = "https://api.data.gov.sg/v1";
         putDefaults(null, null);
     }
 
 
 
     public JSONRequestHeader(final String token) {
-        mConfigBasePath = "https://api.data.gov.sg/v1/environment/psi";
+        mConfigBasePath = "https://api.data.gov.sg/v1";
         putDefaults(token, null);
     }
 
 
 
     public JSONRequestHeader(final String ecpToken, final String nonce) {
-        mConfigBasePath = "https://api.data.gov.sg/v1/environment/psi";
+        mConfigBasePath = "https://api.data.gov.sg/v1";
         putDefaults(ecpToken, nonce);
     }
 
