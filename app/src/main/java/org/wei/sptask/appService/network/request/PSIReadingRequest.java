@@ -24,7 +24,7 @@ public class PSIReadingRequest implements RequestProvider<GetPSIDataResponse, JS
             mQueryArgs.put("date_time", date_time);
         }
         if(date != null) {
-            mQueryArgs.put("date", date_time);
+            mQueryArgs.put("date", date);
         }
         mUrl = mHeaderMap.getConfigBasePath() + URL_PATH;
 

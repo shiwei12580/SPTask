@@ -1,208 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:fitsSystemWindows="true"
     tools:context="org.wei.sptask.MainActivity">
 
-
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/refresher"
+    <LinearLayout
+        android:orientation = "vertical"
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="match_parent">
 
-        <ScrollView
-            android:id="@+id/scroll_view"
+
+        <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
 
-            <LinearLayout
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation = "vertical">
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresher"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <ScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_marginTop="@dimen/item_vertical_margin"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation = "horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight = "1"
-                            android:layout_height="wrap_content"
-                            android:textColor = "@color/black"
-                            android:text="@string/psi_value"
-                            android:layout_marginStart="@dimen/activity_horizontal_margin"/>
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight = "1"
-                            android:layout_height="wrap_content"
-                            android:textColor = "@color/black"
-                            android:text="@string/air_quality_descriptor" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_marginTop="@dimen/item_vertical_margin"
-                        android:layout_width="match_parent"
-                        android:layout_height="5dp"
-                        android:src="@drawable/dotted"/>
+                    android:orientation = "vertical">
 
                     <LinearLayout
-                        android:layout_marginTop="@dimen/item_vertical_margin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation = "horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight = "1"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/item_vertical_margin"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor = "@color/green"
-                            android:text="0 - 50"
-                            android:layout_marginStart="@dimen/activity_horizontal_margin"/>
+                            android:orientation = "horizontal">
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight = "1"
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight = "1"
+                                android:layout_height="wrap_content"
+                                android:textColor = "@color/black"
+                                android:text="@string/psi_value"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight = "1"
+                                android:layout_height="wrap_content"
+                                android:textColor = "@color/black"
+                                android:text="@string/air_quality_descriptor" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_marginTop="@dimen/item_vertical_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:src="@drawable/dotted"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/item_vertical_margin"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor = "@color/green"
-                            android:text="@string/good" />
+                            android:orientation = "horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight = "1"
+                                android:layout_height="wrap_content"
+                                android:textColor = "@color/green"
+                                android:text="0 - 50"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight = "1"
+                                android:layout_height="wrap_content"
+                                android:textColor = "@color/green"
+                                android:text="@string/good" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_marginTop="@dimen/item_vertical_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:src="@drawable/solidline"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/item_vertical_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation = "horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight = "1"
+                                android:layout_height="wrap_content"
+                                android:textColor = "@color/blue"
+                                android:text="51 - 100"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight = "1"
+                                android:layout_height="wrap_content"
+                                android:textColor = "@color/blue"
+                                android:text="@string/moderate" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_marginTop="@dimen/item_vertical_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:src="@drawable/solidline"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/item_vertical_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation = "horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight = "1"
+                                android:layout_height="wrap_content"
+                                android:textColor = "@color/yellow"
+                                android:text="101 - 200"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight = "1"
+                                android:layout_height="wrap_content"
+                                android:textColor = "@color/yellow"
+                                android:text="@string/unhealthy" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_marginTop="@dimen/item_vertical_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:src="@drawable/solidline"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/item_vertical_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation = "horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight = "1"
+                                android:layout_height="wrap_content"
+                                android:textColor = "@color/orange"
+                                android:text="201 - 300"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight = "1"
+                                android:layout_height="wrap_content"
+                                android:textColor = "@color/orange"
+                                android:text="@string/very_unhealthy" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_marginTop="@dimen/item_vertical_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:src="@drawable/solidline"/>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/item_vertical_margin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation = "horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight = "1"
+                                android:layout_height="wrap_content"
+                                android:textColor = "@color/red"
+                                android:text="Above 300"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight = "1"
+                                android:layout_height="wrap_content"
+                                android:textColor = "@color/red"
+                                android:text="@string/hazardous" />
+                        </LinearLayout>
+
+
                     </LinearLayout>
-
-                    <ImageView
-                        android:layout_marginTop="@dimen/item_vertical_margin"
-                        android:layout_width="match_parent"
-                        android:layout_height="5dp"
-                        android:src="@drawable/solidline"/>
-
-                    <LinearLayout
-                        android:layout_marginTop="@dimen/item_vertical_margin"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation = "horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight = "1"
-                            android:layout_height="wrap_content"
-                            android:textColor = "@color/blue"
-                            android:text="51 - 100"
-                            android:layout_marginStart="@dimen/activity_horizontal_margin"/>
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight = "1"
-                            android:layout_height="wrap_content"
-                            android:textColor = "@color/blue"
-                            android:text="@string/moderate" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_marginTop="@dimen/item_vertical_margin"
-                        android:layout_width="match_parent"
-                        android:layout_height="5dp"
-                        android:src="@drawable/solidline"/>
-
-                    <LinearLayout
-                        android:layout_marginTop="@dimen/item_vertical_margin"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation = "horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight = "1"
-                            android:layout_height="wrap_content"
-                            android:textColor = "@color/yellow"
-                            android:text="101 - 200"
-                            android:layout_marginStart="@dimen/activity_horizontal_margin"/>
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight = "1"
-                            android:layout_height="wrap_content"
-                            android:textColor = "@color/yellow"
-                            android:text="@string/unhealthy" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_marginTop="@dimen/item_vertical_margin"
-                        android:layout_width="match_parent"
-                        android:layout_height="5dp"
-                        android:src="@drawable/solidline"/>
-
-                    <LinearLayout
-                        android:layout_marginTop="@dimen/item_vertical_margin"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation = "horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight = "1"
-                            android:layout_height="wrap_content"
-                            android:textColor = "@color/orange"
-                            android:text="201 - 300"
-                            android:layout_marginStart="@dimen/activity_horizontal_margin"/>
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight = "1"
-                            android:layout_height="wrap_content"
-                            android:textColor = "@color/orange"
-                            android:text="@string/very_unhealthy" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_marginTop="@dimen/item_vertical_margin"
-                        android:layout_width="match_parent"
-                        android:layout_height="5dp"
-                        android:src="@drawable/solidline"/>
-
-                    <LinearLayout
-                        android:layout_marginTop="@dimen/item_vertical_margin"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation = "horizontal">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight = "1"
-                            android:layout_height="wrap_content"
-                            android:textColor = "@color/red"
-                            android:text="Above 300"
-                            android:layout_marginStart="@dimen/activity_horizontal_margin"/>
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight = "1"
-                            android:layout_height="wrap_content"
-                            android:textColor = "@color/red"
-                            android:text="@string/hazardous" />
-                    </LinearLayout>
-
 
                 </LinearLayout>
-
-            </LinearLayout>
-        </ScrollView>
-    </android.support.v4.widget.SwipeRefreshLayout>
+            </ScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
 
 
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        xmlns:map="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-</LinearLayout>
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

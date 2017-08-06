@@ -8,4 +8,6 @@
     <string name="unhealthy">Unhealthy</string>
     <string name="very_unhealthy">Very unhealthy</string>
     <string name="hazardous">Hazardous</string>
+    <string name="title_activity_history_data">History</string>
+    <string name="historical">historical data</string>
 </resources>
