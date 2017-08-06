@@ -46,7 +46,7 @@ public class HistoryDataActivity extends AppCompatActivity {
         mRecycler.setLayoutManager(mLinearLayoutManager);
         mRecycler.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         mData = new ArrayList<ItemsData>();
-        mAdapter = new PSIHistoryDataAdapter(mData);
+        mAdapter = new PSIHistoryDataAdapter(this, mData);
         mServiceConnection = RequestManager.register(this);
         mRecycler.setAdapter(mAdapter);
 
