@@ -265,7 +265,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         .position(loc)
                         .title(getString(PSILevelString.get(level)))
                         .icon(BitmapDescriptorFactory.fromResource(PSILevelImg.get(level))));
-                mCurrentLocationMarker.showInfoWindow();
             }
         }
     }

@@ -19,6 +19,7 @@ import org.wei.sptask.appService.network.request.PSIReadingRequest;
 import org.wei.sptask.appService.network.response.GetPSIDataResponse;
 import org.wei.sptask.data.ApiStatus;
 import org.wei.sptask.data.ItemsData;
+import org.wei.sptask.ui.DividerItemDecoration;
 import org.wei.sptask.utils.DateUtils;
 
 import java.util.ArrayList;
@@ -43,6 +44,7 @@ public class HistoryDataActivity extends AppCompatActivity {
         mRecycler = (RecyclerView) findViewById(R.id.recyclerview);
         mLinearLayoutManager = new LinearLayoutManager(this);
         mRecycler.setLayoutManager(mLinearLayoutManager);
+        mRecycler.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         mData = new ArrayList<ItemsData>();
         mAdapter = new PSIHistoryDataAdapter(mData);
         mServiceConnection = RequestManager.register(this);

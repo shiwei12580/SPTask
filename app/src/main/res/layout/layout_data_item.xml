@@ -2,52 +2,98 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/time"
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:text="Time"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id= "@+id/north"
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:text="Time"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text = "North"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id= "@+id/south"
+        <TextView
+            android:id= "@+id/north"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:text = "North"/>
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text = "South"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id= "@+id/east"
+        <TextView
+            android:id= "@+id/south"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:text = "South"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text = "East"/>
+        android:layout_height="wrap_content">
+        <TextView
+            android:id= "@+id/east"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:text = "East"/>
 
-    <TextView
-        android:id= "@+id/west"
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text = "West"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id= "@+id/central"
+        <TextView
+            android:id= "@+id/west"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text = "West"
+            android:gravity="center_horizontal" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text = "central"/>
+        android:layout_height="wrap_content">
 
-
-
+        <TextView
+            android:id= "@+id/central"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text = "central"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
 
 </LinearLayout>
