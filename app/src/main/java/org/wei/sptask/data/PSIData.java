@@ -2,6 +2,8 @@ package org.wei.sptask.data;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Map;
+
 /**
  * Created by sli on 4/8/2017.
  */
@@ -19,6 +21,8 @@ public class PSIData {
     private double south;
     @SerializedName("north")
     private double north;
+
+
 
     public PSIData(double west, double east, double central, double south, double north) {
         this.west = west;

@@ -19,6 +19,7 @@ public class PSIReadingRequest implements RequestProvider<GetPSIDataResponse, JS
 
     public PSIReadingRequest(String date_time, String date){
         mHeaderMap = new JSONRequestHeader();
+        mQueryArgs = new GETQueryArgs();
         if(date_time != null) {
             mQueryArgs.put("date_time", date_time);
         }
@@ -45,7 +46,7 @@ public class PSIReadingRequest implements RequestProvider<GetPSIDataResponse, JS
 
     @Override
     public Map<String, String> getHeaders() {
-        return null;
+        return mHeaderMap;
     }
 
     @Override
@@ -70,7 +71,7 @@ public class PSIReadingRequest implements RequestProvider<GetPSIDataResponse, JS
 
     @Override
     public String toString() {
-        return "MWGetAddressBookRequest{" +
+        return "PSIReadingRequest{" +
                 "mHeaderMap=" + mHeaderMap +
                 ", mQueryArgs=" + mQueryArgs +
                 ", mUrl=\"" + mUrl + "\"" +

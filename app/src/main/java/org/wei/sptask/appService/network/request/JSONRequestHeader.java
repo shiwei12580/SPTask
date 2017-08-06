@@ -39,7 +39,6 @@ public class JSONRequestHeader  extends LinkedHashMap<String, String> {
 
 
         put("api-key", API_KEY);
-        put("Content-Type", JSON_CONTENT_TYPE);
 
         if (token != null) {
             put("Token", token);

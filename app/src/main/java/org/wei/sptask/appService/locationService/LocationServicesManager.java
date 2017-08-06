@@ -91,6 +91,12 @@ public class LocationServicesManager {
         }
     }
 
+    public static void init(Context context){
+        if(sInstance == null) {
+            sInstance = new LocationServicesManager(context);
+        }
+    }
+
     public static LocationServicesManager getInstance() {
         if (sInstance == null) {
             sInstance = new LocationServicesManager(SPTaskApplication.getInstance().getApplicationContext());

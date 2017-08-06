@@ -5,6 +5,7 @@ import org.wei.sptask.data.PSIData;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by sli on 4/8/2017.
@@ -18,6 +19,7 @@ public class LocationDataController {
     private LocationData southReadingPos;
     private LocationData northReadingPos;
     private LocationData currentLocation;
+
 
     public static final int SOUTHWEST = 0;
     public static final int SOUTH = 1;
