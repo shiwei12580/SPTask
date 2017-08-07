@@ -19,10 +19,10 @@ public class PSIDataRangeController {
 
     public PSIDataRangeController() {
         gaps  =  Arrays.asList(
-                50.0,
-                100.0,
-                200.0,
-                300.0
+                (double) 51,
+                (double) 101,
+                (double) 201,
+                (double) 301
         );
     }
 

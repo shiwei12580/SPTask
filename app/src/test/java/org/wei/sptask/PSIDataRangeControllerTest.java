@@ -22,11 +22,11 @@ public class PSIDataRangeControllerTest {
     @Test
     public void testGetPSILevel() {
         List<Double> testData = Arrays.asList(
-                25.0,
-                75.0,
-                150.0,
-                250.0,
-                350.0
+                (double) 50,
+                (double) 51,
+                (double) 150,
+                (double) 250,
+                (double) 301
         );
 
         for (int i = 0; i < 5; i++) {
